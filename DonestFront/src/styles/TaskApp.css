@@ -1,0 +1,278 @@
+/* Root Styles */
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background: url('/src/assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+  }
+  
+  #root {
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  /* Form Styles */
+  .task-form {
+    margin: 0 auto 30px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+  }
+  
+  .task-form input,
+  .task-form textarea {
+    width: 475px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #a09d9d;
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: black;
+  }
+  
+  .task-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .task-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Task List */
+  .task-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Task Cards */
+  .task-card {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: calc(20% - 20px); /* Five cards per row */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Background colors for different task states */
+  .task-card.active {
+    background-color: #f4f9fc; /* Light blue for active tasks */
+  }
+  
+  .task-card.completed {
+    background-color: #e8f5e9; /* Light green for completed tasks */
+    border-color: #c8e6c9;
+    box-shadow: 0 4px 10px rgba(72, 187, 120, 0.4);
+  }
+  
+  .task-card.pending {
+    background-color: #fff3cd; /* Light yellow for pending tasks */
+    border-color: #ffeeba;
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+  }
+  
+  /* Hover Effects */
+  .task-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f8f9fa;
+  }
+  
+  /* Task Card Title */
+  .task-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Task Card Description */
+  .task-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+  }
+  
+  /* Task Card Status/Label */
+  .task-card .status {
+    font-size: 14px;
+    font-weight: 500;
+    color: #28a745;
+    background-color: #d4edda;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  /* Task Actions */
+  .task-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .task-actions button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Complete button */
+  .task-actions button:first-child {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .task-actions button:first-child:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+  }
+  
+  .task-actions button:first-child:active {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.6);
+  }
+  
+  /* Edit button */
+  .task-actions button:nth-child(2) {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .task-actions button:nth-child(2):hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+  }
+  
+  .task-actions button:nth-child(2):active {
+    background-color: #d39e00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.6);
+  }
+  
+  /* Delete button */
+  .task-actions button:last-child {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .task-actions button:last-child:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+  }
+  
+  .task-actions button:last-child:active {
+    background-color: #bd2130;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.6);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .task-card {
+      width: calc(25% - 20px); /* Four cards per row */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .task-card {
+      width: calc(33.33% - 20px); /* Three cards per row */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .task-card {
+      width: calc(50% - 20px); /* Two cards per row */
+    }
+  
+    .task-form input,
+    .task-form textarea {
+      width: 100%;
+    }
+  
+    .task-form {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .task-card {
+      width: 100%; /* Single card per row on smaller screens */
+    }
+  }
+  
