@@ -99,7 +99,7 @@ const TaskApp = () => {
   return (
     <div className="task-app">
       {/* Logo */}
-      <img src="/path/to/your/logo.png" alt="Logo" className="logo" />
+      <img src="/src/assets/logo.png" alt="Logo" className="logo" />
 
       <h1>To-Do List</h1>
       <form onSubmit={editingTask ? handleUpdateTask : handleAddTask} className="task-form">
